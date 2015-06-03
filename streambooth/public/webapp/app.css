@@ -1,0 +1,17 @@
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  margin-top:80px;
+}
+
+h1, h3 {
+  text-align: center;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
