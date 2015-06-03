@@ -23,5 +23,5 @@ $ nw streambooth
 # Then open your browser
 # and visit http://localhost:3002
 
-# It also also work into a LAN. 
+# It also work into a LAN.
 ```

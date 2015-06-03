@@ -65,7 +65,7 @@
 
             setTimeout(function() {
               sockets.forEach(function(socket) {
-                ss(socket).emit('off-stream', url);
+                ss(socket).emit('off-stream', true);
               });
             }, 50);
 
