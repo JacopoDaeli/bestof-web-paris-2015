@@ -6,7 +6,7 @@
   </head>
   <body>
     <h1>Stream Booth!</h1>
-    <img id="img" src="/no-signal.jpg" width="640" height="480" />
+    <img id="img" src="/no-signal.jpg" width="640" height="480"/>
   </body>
 
   <script src="/socket.io/socket.io.js"></script>
@@ -14,14 +14,33 @@
 
   <script>
     window.onload = function() {
+
+      var start = null;
+
       var img = document.getElementById('img');
+
+      function step(timestamp) {
+        if (!start) start = timestamp;
+        var progress = timestamp - start;
+        img.style.left = Math.min(progress/10, 200) + "px";
+        if (progress < 2000) {
+          window.requestAnimationFrame(step);
+        }
+      }
+
+      window.requestAnimationFrame(step);
+
+
+
       var socket = io.connect('http://' + window.location.hostname + ':3002/video');
       ss(socket).on('on-stream', function(url) {
         img.src = url;
       });
 
-      ss(socket).on('off-stream', function(url) {
+      ss(socket).on('off-stream', function() {
         img.src = '/no-signal.jpg';
+        img.style.width = 640;
+        img.style.height = 480;
       });
     }
   </script>
