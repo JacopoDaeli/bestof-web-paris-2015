@@ -26,6 +26,7 @@
       address.innerHTML= `Connect to http://${ip.address()}:3002`;
 
       let onStream = false;
+      let nConnections = 0;
 
       toogleStreamBtn.addEventListener('click', function(e) {
         if(!onStream) {
@@ -40,6 +41,7 @@
 
       const camera = app.window.document.getElementById('camera'); // video
       const canvas = app.window.document.getElementById('canvas'); //canvas
+      const nConnectionsEl = app.window.document.getElementById('nConnections');
       const ctx = canvas.getContext('2d');
 
       let sockets = [];
@@ -57,7 +59,7 @@
               sockets.forEach(function(socket) {
                 ss(socket).emit('on-stream', url);
               });
-            }, 2);
+            }, 33);
           });
 
           app.on('stop-start-stream', function() {
@@ -67,7 +69,7 @@
               sockets.forEach(function(socket) {
                 ss(socket).emit('off-stream', true);
               });
-            }, 50);
+            }, 75);
 
           });
 
@@ -75,6 +77,8 @@
 
           io.of('/video').on('connection', function(socket) {
             console.log('New connection!');
+            nConnections++;
+            nConnectionsEl.innerHTML = `${nConnections} people connected.`;
             sockets.push(socket);
 
             if(onStream) {
@@ -83,6 +87,11 @@
             } else {
               ss(socket).emit('off-stream', true);
             }
+
+            socket.on('disconnect', function () {
+              nConnections--;
+              nConnectionsEl.innerHTML = `${nConnections} people connected.`;
+            });
 
           });
 
