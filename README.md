@@ -16,6 +16,8 @@ npm install nw
 
 ## Stream Booth
 
+This code is a workaround for making my demo. For real case, please check [PeerJS](http://peerjs.com)
+
 ```
 # Run the web NW.JS app
 $ nw streambooth
@@ -24,7 +26,4 @@ $ nw streambooth
 # and visit http://localhost:3002
 
 # It can work into a LAN (sometime with a large lag)
-
-# This code is a workaround for making my demo,
-# for real case, please check [PeerJS](http://peerjs.com)
 ```
