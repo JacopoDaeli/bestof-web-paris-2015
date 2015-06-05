@@ -16,7 +16,7 @@ npm install nw
 
 ## Stream Booth
 
-This code is a workaround for making my demo. For real case, please check [PeerJS](http://peerjs.com)
+This code is a workaround for making my demo. For real case, please check [PeerJS](http://peerjs.com).
 
 ```
 # Run the web NW.JS app
