@@ -1,5 +1,5 @@
 # bestof-web-paris-2015
-Repo containing advanced code examples from my talk for Best of Web 2015 in Paris.
+Repo containing the code example from my talk for Best of Web 2015 in Paris.
 
 
 ## Prerequisite
@@ -23,5 +23,8 @@ $ nw streambooth
 # Then open your browser
 # and visit http://localhost:3002
 
-# It also work into a LAN (it can have a very large lag).
+# It can work into a LAN (sometime with a large lag)
+
+# This code is a workaround for making my demo,
+# for real case, please check [PeerJS](http://peerjs.com)
 ```
