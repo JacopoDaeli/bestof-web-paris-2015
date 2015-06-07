@@ -48,6 +48,6 @@ $ node sserver.js
 
 # Peer1 is now streaming to peer2 and viceversa.
 # If you change a bit this code you can use it online between different persons too.
-
-# For more details visit: [http://peerjs.com](http://peerjs.com).
 ```
+
+For more details visit: [http://peerjs.com](http://peerjs.com).
