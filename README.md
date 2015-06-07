@@ -14,6 +14,7 @@ Install nw.js via npm locally:
 npm install nw
 ```
 
+
 ## Stream Booth
 
 This code is a workaround for making my demo. For real case, please check [PeerJS](http://peerjs.com).
@@ -26,4 +27,13 @@ $ nw streambooth
 # and visit http://localhost:3002
 
 # It can work into a LAN (sometime with a large lag)
+```
+
+
+## Chat Booth
+
+This code uses WebRTC and [PeerJS](http://peerjs.com).
+
+```
+# Coming Soon
 ```
