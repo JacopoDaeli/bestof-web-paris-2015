@@ -1,0 +1,23 @@
+<html>
+  <head>
+    <script src="http://cdn.peerjs.com/0.3/peer.js"></script>
+  </head>
+  <body>
+    <video id="camera" autoplay></video>
+  </body>
+
+  <script type="text/javascript">
+    var peer = new Peer('peer2', {host: 'localhost', port:9000, path: '/chat-booth'});
+
+    navigator.webkitGetUserMedia({video: true, audio: true}, function(stream) {
+      var call = peer.call('peer1', stream);
+      call.on('stream', function(remoteStream) {
+        // Show stream in some video/canvas element.
+        var camera = document.getElementById('camera');
+        camera.src = URL.createObjectURL(remoteStream);
+      });
+    }, function(err) {
+      console.log('Failed to get local stream' ,err);
+    });
+  </script>
+</html>

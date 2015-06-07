@@ -32,8 +32,22 @@ $ nw streambooth
 
 ## Chat Booth
 
-This code uses WebRTC and [PeerJS](http://peerjs.com).
+This code uses WebRTC and [PeerJS](http://peerjs.com) for streaming between two peers audio and video from user devices (microphone and webcam respectively).
 
 ```
-# Coming Soon
+# Open a terminal and run peerjs-server
+$ node pserver.js
+
+# Open a terminal and run node-static
+$ node sserver.js
+
+# Open a window in your browser and go to http://localhost:8080/peer1.html
+# Open another window in your browser and go to http://localhost:8080/peer2.html
+# Authorize peer2 to access to your camera and microphone
+# Now visit the peer1 window and do the same here
+
+# Peer1 is now streaming to peer2 and viceversa.
+# If you change a bit this code you can use it online between different persons too.
+
+# For more details visit: [http://peerjs.com](http://peerjs.com).
 ```

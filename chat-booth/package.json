@@ -1,0 +1,26 @@
+{
+  "name": "chat-booth",
+  "version": "0.0.1",
+  "description": "A simple WebRTC video audo streaming chat.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "webrtc",
+    "video",
+    "audio",
+    "stream",
+    "buffer"
+  ],
+  "author": "Jacopo Daeli <jacopo.daeli@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "node-serve": "0.0.3",
+    "node-static": "^0.7.6",
+    "peer": "^0.2.8"
+  },
+  "devDependencies": {
+    "node-serve": "0.0.3"
+  }
+}
