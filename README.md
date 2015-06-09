@@ -30,7 +30,7 @@ $ nw streambooth
 ```
 
 
-## Chat Booth
+## Chat Booth (extra)
 
 This code uses WebRTC and [PeerJS](http://peerjs.com) for streaming between two peers audio and video from user devices (microphone and webcam respectively).
 
