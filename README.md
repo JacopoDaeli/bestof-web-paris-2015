@@ -1,5 +1,5 @@
 # bestof-web-paris-2015
-Repo containing the code example from my talk for Best of Web 2015 in Paris.
+Presentation repository at Best of Web in Paris, Jun 5th 2015.
 
 
 ## Prerequisite
